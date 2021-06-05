@@ -106,7 +106,7 @@ rozklad_popularnosci_tagow_view <- function(TopTags, data, date1, date2, file_ty
     file_name <- paste(file_name, date2, sep = "_")
     file_name <- paste(file_name, ".png", sep="")
     
-    png(file_name, width = 800, height = 800)
+    png(file_name, width = 850, height = 600)
   }
   
   else {
@@ -132,7 +132,7 @@ rozklad_popularnosci_tagow_view <- function(TopTags, data, date1, date2, file_ty
   title <- paste("Rozkład popularności wybranych tagów według ilości wyświetleń w roku", substr(date1, 1, 4))
   # tytul <- paste(tytul, "a", sep = " ")
   # tytul <- paste(tytul, substr(data2, 1, 4), sep = " ")
-  pie(Slices, labels = Labels, radius = 0.7, border = "white", col = myPalette, main = title)
+  pie(Slices, labels = Labels, radius = 0.7, border = "white", col = myPalette, main = title, cex=1.2, cex.main = 1.7 )
   
   dev.off()
   
@@ -215,7 +215,7 @@ rozklad_popularnosci_tagow_count <- function(TopTags, data, date1, date2, file_t
   title <- paste("Rozkład popularności wybranych tagów według ilości postów w roku", substr(date1, 1, 4))
   # tytul <- paste(tytul, "a", sep = " ")
   # tytul <- paste(tytul, substr(data2, 1, 4), sep = " ")
-  pie(Slices, labels = Labels, radius = 0.7, border = "white", col = myPalette, main = title)
+  pie(Slices, labels = Labels, radius = 0.7, border = "white", col = myPalette, main = title, cex=1.2, cex.main = 1.7 )
   
   dev.off()
   
@@ -299,27 +299,6 @@ TopTags_fitness_2020 <- getting_n_most_popular_tags(read.csv("./fitness/Top_Tags
 
 
 
-# STARE, NIEAKTUALNE
-
-# TopTags_fitness <- Tags_fitness %>% filter(Count>500) %>% select(TagName)
-# TopTags_fitness <- as.list(TopTags_fitness)
-# TopTags_fitness <- TopTags_fitness[[1]]
-# TopTags_fitness <- paste("<", TopTags_fitness, sep = "")
-# TopTags_fitness <- paste(TopTags_fitness, ">", sep = "")
-# 
-# TopTags_sport <- Tags_sport %>% filter(Count>310) %>% select(TagName)
-# TopTags_sport <- as.list(TopTags_sport)
-# TopTags_sport <- TopTags_sport[[1]]
-# TopTags_sport <- paste("<", TopTags_sport, sep = "")
-# TopTags_sport <- paste(TopTags_sport, ">", sep = "")
-# 
-# TopTags_gaming <- Tags_gaming %>% filter(Count>1200) %>% select(TagName)
-# TopTags_gaming <- as.list(TopTags_gaming)
-# TopTags_gaming <- TopTags_gaming[[1]]
-# TopTags_gaming <- paste("<", TopTags_gaming, sep = "")
-# TopTags_gaming <- paste(TopTags_gaming, ">", sep = "")
-
-
 # Najpopularniejsze tagi ogółem (top 10)
 
 TopTags_fitness <- getting_n_most_popular_tags_v2(Tags_fitness)
@@ -354,6 +333,44 @@ print(rozklad_popularnosci_tagow_count(TopTags_fitness_2020, data,  "2020-01-01T
 
 
 
+
+rodzaj_pliku <- "png"
+sciezka <- "./sport/Top_Tags"
+data <- Posts_sport
+
+print(rozklad_popularnosci_tagow_view(TopTags_sport_2016, data,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_sport_2017, data,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_sport_2018, data,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_sport_2019, data,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_sport_2020, data,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka))
+
+print(rozklad_popularnosci_tagow_count(TopTags_sport_2016, data,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_count(TopTags_sport_2017, data,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_count(TopTags_sport_2018, data,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_count(TopTags_sport_2019, data,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_count(TopTags_sport_2020, data,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka))
+
+
+
+
+rodzaj_pliku <- "png"
+sciezka <- "./gaming/Top_Tags"
+data <- Posts_gaming
+
+print(rozklad_popularnosci_tagow_view(TopTags_gaming_2016, data,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_gaming_2017, data,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_gaming_2018, data,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_gaming_2019, data,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_gaming_2020, data,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka))
+
+print(rozklad_popularnosci_tagow_count(TopTags_gaming_2016, data,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_count(TopTags_gaming_2017, data,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_count(TopTags_gaming_2018, data,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_count(TopTags_gaming_2019, data,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_count(TopTags_gaming_2020, data,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka))
+
+
+
 # PRZERWA
 # -------------------------------------------------------------------------
 # PRZERWA
@@ -364,7 +381,7 @@ print(rozklad_popularnosci_tagow_count(TopTags_fitness_2020, data,  "2020-01-01T
 
 # FITNESS
 
-rodzaj_pliku <- "jpg"
+rodzaj_pliku <- "png"
 sciezka <- "./fitness"
 
 print(rozklad_popularnosci_tagow_view(TopTags_fitness, Posts_fitness,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka))
@@ -382,7 +399,7 @@ rozklad_popularnosci_tagow_count(TopTags_fitness, Posts_fitness,  "2020-01-01T00
 
 # SPORT
 
-rodzaj_pliku <- "jpg"
+rodzaj_pliku <- "png"
 sciezka <- "./sport"
 
 rozklad_popularnosci_tagow_view(TopTags_sport, Posts_sport,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka)
@@ -401,7 +418,7 @@ rozklad_popularnosci_tagow_count(TopTags_sport, Posts_sport,  "2020-01-01T00:00:
 
 # GAMING
 
-rodzaj_pliku <- "jpg"
+rodzaj_pliku <- "png"
 sciezka <- "./gaming"
 
 rozklad_popularnosci_tagow_view(TopTags_gaming, Posts_gaming,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka)
