@@ -336,21 +336,21 @@ TopTags_gaming <- getting_n_most_popular_tags_v2(Tags_gaming)
 
 # Rozkład popularności według top 10 tagów w danym roku, wykres dla każdego roku osobno
 
-# rodzaj_pliku <- "png"
-# sciezka <- "./fitness/Top_Tags"
-# data <- Posts_fitness
-# 
-# print(rozklad_popularnosci_tagow_view(TopTags_fitness_2016, data,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka))
-# print(rozklad_popularnosci_tagow_view(TopTags_fitness_2017, data,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka))
-# print(rozklad_popularnosci_tagow_view(TopTags_fitness_2018, data,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka))
-# print(rozklad_popularnosci_tagow_view(TopTags_fitness_2019, data,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka))
-# print(rozklad_popularnosci_tagow_view(TopTags_fitness_2020, data,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka))
-# 
-# print(rozklad_popularnosci_tagow_count(TopTags_fitness_2016, data,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka))
-# print(rozklad_popularnosci_tagow_count(TopTags_fitness_2017, data,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka))
-# print(rozklad_popularnosci_tagow_count(TopTags_fitness_2018, data,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka))
-# print(rozklad_popularnosci_tagow_count(TopTags_fitness_2019, data,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka))
-# print(rozklad_popularnosci_tagow_count(TopTags_fitness_2020, data,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka))
+rodzaj_pliku <- "png"
+sciezka <- "./fitness/Top_Tags"
+data <- Posts_fitness
+
+print(rozklad_popularnosci_tagow_view(TopTags_fitness_2016, data,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_fitness_2017, data,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_fitness_2018, data,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_fitness_2019, data,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_fitness_2020, data,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka))
+
+print(rozklad_popularnosci_tagow_count(TopTags_fitness_2016, data,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_count(TopTags_fitness_2017, data,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_count(TopTags_fitness_2018, data,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_count(TopTags_fitness_2019, data,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_count(TopTags_fitness_2020, data,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka))
 
 
 
@@ -362,57 +362,57 @@ TopTags_gaming <- getting_n_most_popular_tags_v2(Tags_gaming)
 
 # Rozkład popularności według top 10 tagów w ogółem, wykres dla każdego roku osobno
 
-# # FITNESS
-# 
-# rodzaj_pliku <- "jpg"
-# sciezka <- "./fitness"
-# 
-# print(rozklad_popularnosci_tagow_view(TopTags_fitness, Posts_fitness,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka))
-# print(rozklad_popularnosci_tagow_view(TopTags_fitness, Posts_fitness,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka))
-# print(rozklad_popularnosci_tagow_view(TopTags_fitness, Posts_fitness,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka))
-# print(rozklad_popularnosci_tagow_view(TopTags_fitness, Posts_fitness,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka))
-# print(rozklad_popularnosci_tagow_view(TopTags_fitness, Posts_fitness,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka))
-# 
-# rozklad_popularnosci_tagow_count(TopTags_fitness, Posts_fitness,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_count(TopTags_fitness, Posts_fitness,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_count(TopTags_fitness, Posts_fitness,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_count(TopTags_fitness, Posts_fitness,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_count(TopTags_fitness, Posts_fitness,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka)
-# 
-# 
-# # SPORT
-# 
-# rodzaj_pliku <- "jpg"
-# sciezka <- "./sport"
-# 
-# rozklad_popularnosci_tagow_view(TopTags_sport, Posts_sport,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_view(TopTags_sport, Posts_sport,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_view(TopTags_sport, Posts_sport,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_view(TopTags_sport, Posts_sport,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_view(TopTags_sport, Posts_sport,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka)
-# 
-# rozklad_popularnosci_tagow_count(TopTags_sport, Posts_sport,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_count(TopTags_sport, Posts_sport,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_count(TopTags_sport, Posts_sport,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_count(TopTags_sport, Posts_sport,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_count(TopTags_sport, Posts_sport,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka)
-# 
-# 
-# 
-# # GAMING
-# 
-# rodzaj_pliku <- "jpg"
-# sciezka <- "./gaming"
-# 
-# rozklad_popularnosci_tagow_view(TopTags_gaming, Posts_gaming,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_view(TopTags_gaming, Posts_gaming,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_view(TopTags_gaming, Posts_gaming,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_view(TopTags_gaming, Posts_gaming,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_view(TopTags_gaming, Posts_gaming,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka)
-# 
-# rozklad_popularnosci_tagow_count(TopTags_gaming, Posts_gaming,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_count(TopTags_gaming, Posts_gaming,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_count(TopTags_gaming, Posts_gaming,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_count(TopTags_gaming, Posts_gaming,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka)
-# rozklad_popularnosci_tagow_count(TopTags_gaming, Posts_gaming,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka)
+# FITNESS
+
+rodzaj_pliku <- "jpg"
+sciezka <- "./fitness"
+
+print(rozklad_popularnosci_tagow_view(TopTags_fitness, Posts_fitness,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_fitness, Posts_fitness,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_fitness, Posts_fitness,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_fitness, Posts_fitness,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka))
+print(rozklad_popularnosci_tagow_view(TopTags_fitness, Posts_fitness,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka))
+
+rozklad_popularnosci_tagow_count(TopTags_fitness, Posts_fitness,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_count(TopTags_fitness, Posts_fitness,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_count(TopTags_fitness, Posts_fitness,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_count(TopTags_fitness, Posts_fitness,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_count(TopTags_fitness, Posts_fitness,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka)
+
+
+# SPORT
+
+rodzaj_pliku <- "jpg"
+sciezka <- "./sport"
+
+rozklad_popularnosci_tagow_view(TopTags_sport, Posts_sport,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_view(TopTags_sport, Posts_sport,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_view(TopTags_sport, Posts_sport,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_view(TopTags_sport, Posts_sport,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_view(TopTags_sport, Posts_sport,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka)
+
+rozklad_popularnosci_tagow_count(TopTags_sport, Posts_sport,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_count(TopTags_sport, Posts_sport,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_count(TopTags_sport, Posts_sport,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_count(TopTags_sport, Posts_sport,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_count(TopTags_sport, Posts_sport,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka)
+
+
+
+# GAMING
+
+rodzaj_pliku <- "jpg"
+sciezka <- "./gaming"
+
+rozklad_popularnosci_tagow_view(TopTags_gaming, Posts_gaming,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_view(TopTags_gaming, Posts_gaming,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_view(TopTags_gaming, Posts_gaming,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_view(TopTags_gaming, Posts_gaming,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_view(TopTags_gaming, Posts_gaming,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka)
+
+rozklad_popularnosci_tagow_count(TopTags_gaming, Posts_gaming,  "2016-01-01T00:00:00", "2017-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_count(TopTags_gaming, Posts_gaming,  "2017-01-01T00:00:00", "2018-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_count(TopTags_gaming, Posts_gaming,  "2018-01-01T00:00:00", "2019-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_count(TopTags_gaming, Posts_gaming,  "2019-01-01T00:00:00", "2020-01-01T00:00:00", rodzaj_pliku, sciezka)
+rozklad_popularnosci_tagow_count(TopTags_gaming, Posts_gaming,  "2020-01-01T00:00:00", "2021-01-01T00:00:00", rodzaj_pliku, sciezka)
 
