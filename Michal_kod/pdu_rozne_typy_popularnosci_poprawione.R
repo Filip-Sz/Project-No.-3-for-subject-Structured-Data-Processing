@@ -17,21 +17,21 @@ GamingPosts <- read.csv("C:/Users/micha/Downloads/Gaming_Posts.csv")
 ##USTALENIE NAJPOPULARNIEJSZYCH TAGÓW:
 
 
-BestTags <- SportsTags %>% filter(X._Count > 100) %>% select(X._TagName)
+BestTags <- SportsTags %>% filter(Count > 100) %>% select(TagName)
 
 TagsList <- list()
 for (i in 1:nrow(BestTags)){
   TagsList[i] <- BestTags[i,]
 }
 
-BestTagsFitness <- FitnessTags %>% filter(X._Count > 200) %>% select(X._TagName)
+BestTagsFitness <- FitnessTags %>% filter(Count > 200) %>% select(TagName)
 
 FitnessTagsList <- list()
 for (i in 1:nrow(BestTagsFitness)){
   FitnessTagsList[i] <- BestTagsFitness[i,]
 }
 
-BestTagsGaming <- GamingTags %>% filter(X._Count > 800) %>% select(X._TagName)
+BestTagsGaming <- GamingTags %>% filter(Count > 800) %>% select(TagName)
 
 GamingTagsList <- list()
 for (i in 1:nrow(BestTagsGaming)){
@@ -45,7 +45,7 @@ GamingTagsList
 
 tabela_ViewCount <- data.frame()
 for(i in 1:length(TagsList)){
-  tabela_tymczasowa <- SportsPosts %>% filter(stri_detect_fixed(X._Tags, TagsList[i])) %>% summarise(ViewScore = sum(X._ViewCount))
+  tabela_tymczasowa <- SportsPosts %>% filter(stri_detect_fixed(Tags, TagsList[i])) %>% summarise(ViewScore = sum(ViewCount))
   tabela_tymczasowa <- tabela_tymczasowa %>% mutate(TagName = TagsList[i])
   tabela_ViewCount <- rbind(tabela_ViewCount, tabela_tymczasowa)
 }
@@ -55,7 +55,7 @@ tabela_ViewCount
 
 tabela_CommentCount <- data.frame()
 for(i in 1:length(TagsList)){
-  tabela_tymczasowa <- SportsPosts %>% filter(stri_detect_fixed(X._Tags, TagsList[i])) %>% summarise(CommentScore = sum(X._CommentCount))
+  tabela_tymczasowa <- SportsPosts %>% filter(stri_detect_fixed(Tags, TagsList[i])) %>% summarise(CommentScore = sum(CommentCount))
   tabela_tymczasowa <- tabela_tymczasowa %>% mutate(TagName = TagsList[i])
   tabela_CommentCount <- rbind(tabela_CommentCount, tabela_tymczasowa)
 }
@@ -65,7 +65,7 @@ tabela_CommentCount
 
 tabela_MeanCommentCount <- data.frame()
 for(i in 1:length(TagsList)){
-  tabela_tymczasowa <- SportsPosts %>% filter(stri_detect_fixed(X._Tags, TagsList[i])) %>% summarise(MeanCommentScore = mean(X._CommentCount))
+  tabela_tymczasowa <- SportsPosts %>% filter(stri_detect_fixed(Tags, TagsList[i])) %>% summarise(MeanCommentScore = mean(CommentCount))
   tabela_tymczasowa <- tabela_tymczasowa %>% mutate(TagName = TagsList[i])
   tabela_MeanCommentCount <- rbind(tabela_MeanCommentCount, tabela_tymczasowa)
 }
@@ -75,7 +75,7 @@ tabela_MeanCommentCount
 
 tabela_AnswerCount <- data.frame()
 for(i in 1:length(TagsList)){
-  tabela_tymczasowa <- SportsPosts %>% filter(stri_detect_fixed(X._Tags, TagsList[i])) %>% summarise(AnswerScore = sum(X._AnswerCount))
+  tabela_tymczasowa <- SportsPosts %>% filter(stri_detect_fixed(Tags, TagsList[i])) %>% summarise(AnswerScore = sum(AnswerCount))
   tabela_tymczasowa <- tabela_tymczasowa %>% mutate(TagName = TagsList[i])
   tabela_AnswerCount <- rbind(tabela_AnswerCount, tabela_tymczasowa)
 }
@@ -85,7 +85,7 @@ tabela_AnswerCount
 
 tabela_MeanAnswerCount <- data.frame()
 for(i in 1:length(TagsList)){
-  tabela_tymczasowa <- SportsPosts %>% filter(stri_detect_fixed(X._Tags, TagsList[i])) %>% summarise(MeanAnswerScore = mean(X._AnswerCount))
+  tabela_tymczasowa <- SportsPosts %>% filter(stri_detect_fixed(Tags, TagsList[i])) %>% summarise(MeanAnswerScore = mean(AnswerCount))
   tabela_tymczasowa <- tabela_tymczasowa %>% mutate(TagName = TagsList[i])
   tabela_MeanAnswerCount <- rbind(tabela_MeanAnswerCount, tabela_tymczasowa)
 }
@@ -97,7 +97,7 @@ tabela_MeanAnswerCount
 
 tabela_FitnessViewCount <- data.frame()
 for(i in 1:length(TagsList)){
-  tabela_tymczasowa <- FitnessPosts %>% filter(stri_detect_fixed(X._Tags, FitnessTagsList[i])) %>% summarise(ViewScore = sum(X._ViewCount))
+  tabela_tymczasowa <- FitnessPosts %>% filter(stri_detect_fixed(Tags, FitnessTagsList[i])) %>% summarise(ViewScore = sum(ViewCount))
   tabela_tymczasowa <- tabela_tymczasowa %>% mutate(TagName = FitnessTagsList[i])
   tabela_FitnessViewCount <- rbind(tabela_FitnessViewCount, tabela_tymczasowa)
 }
@@ -107,7 +107,7 @@ tabela_FitnessViewCount
 
 tabela_FitnessAnswerCount <- data.frame()
 for(i in 1:length(TagsList)){
-  tabela_tymczasowa <- FitnessPosts %>% filter(stri_detect_fixed(X._Tags, FitnessTagsList[i])) %>% summarise(ViewScore = sum(X._AnswerCount))
+  tabela_tymczasowa <- FitnessPosts %>% filter(stri_detect_fixed(Tags, FitnessTagsList[i])) %>% summarise(ViewScore = sum(AnswerCount))
   tabela_tymczasowa <- tabela_tymczasowa %>% mutate(TagName = FitnessTagsList[i])
   tabela_FitnessAnswerCount <- rbind(tabela_FitnessAnswerCount, tabela_tymczasowa)
 }
@@ -117,7 +117,7 @@ tabela_FitnessAnswerCount
 
 tabela_FitnessMeanAnswerCount <- data.frame()
 for(i in 1:length(TagsList)){
-  tabela_tymczasowa <- FitnessPosts %>% filter(stri_detect_fixed(X._Tags, FitnessTagsList[i])) %>% summarise(ViewScore = mean(X._AnswerCount))
+  tabela_tymczasowa <- FitnessPosts %>% filter(stri_detect_fixed(Tags, FitnessTagsList[i])) %>% summarise(ViewScore = mean(AnswerCount))
   tabela_tymczasowa <- tabela_tymczasowa %>% mutate(TagName = FitnessTagsList[i])
   tabela_FitnessMeanAnswerCount <- rbind(tabela_FitnessMeanAnswerCount, tabela_tymczasowa)
 }
@@ -127,7 +127,7 @@ tabela_FitnessMeanAnswerCount
 
 tabela_FitnessCommentCount <- data.frame()
 for(i in 1:length(TagsList)){
-  tabela_tymczasowa <- FitnessPosts %>% filter(stri_detect_fixed(X._Tags, FitnessTagsList[i])) %>% summarise(ViewScore = sum(X._CommentCount))
+  tabela_tymczasowa <- FitnessPosts %>% filter(stri_detect_fixed(Tags, FitnessTagsList[i])) %>% summarise(ViewScore = sum(CommentCount))
   tabela_tymczasowa <- tabela_tymczasowa %>% mutate(TagName = FitnessTagsList[i])
   tabela_FitnessCommentCount <- rbind(tabela_FitnessCommentCount, tabela_tymczasowa)
 }
@@ -137,7 +137,7 @@ tabela_FitnessCommentCount[2]
 
 tabela_FitnessMeanCommentCount <- data.frame()
 for(i in 1:length(TagsList)){
-  tabela_tymczasowa <- FitnessPosts %>% filter(stri_detect_fixed(X._Tags, FitnessTagsList[i])) %>% summarise(ViewScore = mean(X._CommentCount))
+  tabela_tymczasowa <- FitnessPosts %>% filter(stri_detect_fixed(Tags, FitnessTagsList[i])) %>% summarise(ViewScore = mean(CommentCount))
   tabela_tymczasowa <- tabela_tymczasowa %>% mutate(TagName = FitnessTagsList[i])
   tabela_FitnessMeanCommentCount <- rbind(tabela_FitnessMeanCommentCount, tabela_tymczasowa)
 }
