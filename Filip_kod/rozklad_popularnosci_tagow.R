@@ -4,7 +4,6 @@ library(dplyr, warn.conflicts = FALSE)
 library(compare)
 library(data.table)
 library(stringi)
-library(stringi)
 library(RColorBrewer)
 
 # Ustawienie potrzebnych opcji
@@ -12,14 +11,32 @@ options(stringsAsFactors = FALSE)
 options(dplyr.summarise.inform = FALSE)
 
 # Ustawianie zmiennych (data.frame)
+Badges_fitness <- read.csv("./fitness/Badges.csv")
+Comments_fitness <- read.csv("./fitness/Comments.csv")
+PostHistory_fitness <- read.csv("./fitness/PostHistory.csv")
+PostLinks_fitness <- read.csv("./fitness/PostLinks.csv")
 Posts_fitness <- read.csv("./fitness/Posts.csv")
 Tags_fitness <- read.csv("./fitness/Tags.csv")
+Users_fitness <- read.csv("./fitness/Users.csv")
+Votes_fitness <- read.csv("./fitness/Votes.csv")
 
+Badges_sport <- read.csv("./sport/Badges.csv")
+Comments_sport <- read.csv("./sport/Comments.csv")
+PostHistory_sport <- read.csv("./sport/PostHistory.csv")
+PostLinks_sport <- read.csv("./sport/PostLinks.csv")
 Posts_sport <- read.csv("./sport/Posts.csv")
 Tags_sport <- read.csv("./sport/Tags.csv")
+Users_sport <- read.csv("./sport/Users.csv")
+Votes_sport <- read.csv("./sport/Votes.csv")
 
+Badges_gaming <- read.csv("./gaming/Badges.csv")
+Comments_gaming <- read.csv("./gaming/Comments.csv")
+PostHistory_gaming <- read.csv("./gaming/PostHistory.csv")
+PostLinks_gaming <- read.csv("./gaming/PostLinks.csv")
 Posts_gaming <- read.csv("./gaming/Posts.csv")
 Tags_gaming <- read.csv("./gaming/Tags.csv")
+Users_gaming <- read.csv("./gaming/Users.csv")
+Votes_gaming <- read.csv("./gaming/Votes.csv")
 
 
 
